@@ -9,6 +9,7 @@ import { initialUnits, initialUpgrades } from './types';
 import type { Unit, Upgrade } from './types';
 import useLocalStorage from './hooks/useLocalStorage';
 
+// クリック時のフローティングテキストの型定義
 type FloatingTextData = {
   id: string;
   value: number;
@@ -183,7 +184,6 @@ const App: React.FC = () => {
       <BackgroundEffect />
 
       {/* AP表示エリア (固定) */}
-      {/* PC表示では左側メインコンテンツの幅に合わせる (w-2/3) */}
       <div className="fixed top-0 left-0 right-0 sm:right-auto sm:w-2/3 p-4 bg-gray-800 bg-opacity-70 z-20 text-center sm:text-left rounded-br-lg sm:rounded-bl-none">
         <APDisplay aiPoints={aiPoints} />
         <p className="text-gray-400 text-sm">AP/秒: {apPerSecond.toFixed(1)}</p>
@@ -192,15 +192,16 @@ const App: React.FC = () => {
       {/* メインコンテンツエリア (AP表示の高さ分オフセット) */}
       <div className="flex flex-col sm:flex-row flex-grow pt-[100px] sm:pt-0 z-10">
         {/* 左側・中央コンテンツ (スマホでは上部、PCでは左) */}
-        <div className="flex-grow flex flex-col items-center p-4 sm:p-8">
-          {/* AIボタン (縦方向の中央に配置) */}
-          <div className="flex-grow flex items-center justify-center w-full">
+        <div className="w-full sm:w-2/3 flex flex-col items-center p-4 sm:p-8">
+          <div className="w-full max-w-sm flex items-center justify-center mb-8 sm:mb-0 sm:h-full">
             <ClickerButton id="ai-button" onClick={handleAIClick} clickPower={clickPower} />
           </div>
+
+          {/* 旧下部アップグレードメニューの残骸（コメントアウトではなく削除済み） */}
         </div>
 
-        {/* 右側：サイドバー */}
-        <div className="w-full sm:w-1/3 p-4">
+        {/* 右側：統合されたサイドバー (スマホではAIボタンなどの下に、PCでは右に) */}
+        <div className="w-full sm:w-1/3 p-0 sm:p-4">
           <RightSidebar
             currentAiPoints={aiPoints}
             units={units}

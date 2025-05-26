@@ -1,8 +1,8 @@
 // src/components/RightSidebar.tsx
 import React, { useState } from 'react';
-import UnitShop from './UnitShop'; // ユニットショップをインポート
-import UpgradeMenu from './UpgradeMenu'; // アップグレードメニューをインポート
-import type { Unit, Upgrade } from '../types'; // 型をインポート
+import UnitShop from './UnitShop';
+import UpgradeMenu from './UpgradeMenu';
+import type { Unit, Upgrade } from '../types';
 
 interface RightSidebarProps {
   currentAiPoints: number;
@@ -12,7 +12,6 @@ interface RightSidebarProps {
   onBuyUpgrade: (upgradeId: string, cost: number) => void;
 }
 
-// タブの種類を定義
 type Tab = 'units' | 'upgrades';
 
 const RightSidebar: React.FC<RightSidebarProps> = ({
@@ -22,8 +21,7 @@ const RightSidebar: React.FC<RightSidebarProps> = ({
   onBuyUnit,
   onBuyUpgrade,
 }) => {
-  // 現在選択されているタブの状態
-  const [activeTab, setActiveTab] = useState<Tab>('units'); // 初期値はユニットショップ
+  const [activeTab, setActiveTab] = useState<Tab>('units');
 
   return (
     <div className="w-full h-full bg-gray-800 border-t border-gray-700 sm:border-t-0 sm:border-l shadow-lg flex flex-col">
@@ -51,8 +49,8 @@ const RightSidebar: React.FC<RightSidebarProps> = ({
         </button>
       </div>
 
-      {/* タブの内容 */}
-      <div className="flex-grow p-4 overflow-y-auto">
+      {/* タブの内容 - overflow-y-auto を overflow-y-scroll に変更 */}
+      <div className="flex-grow p-4 overflow-y-scroll"> {/* ★ここを修正しました！★ */}
         {activeTab === 'units' && (
           <UnitShop
             units={units}
