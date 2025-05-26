@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/ai-clicker/',
   plugins: [
     react(),
     VitePWA({
@@ -16,7 +17,7 @@ export default defineConfig({
         theme_color: '#1a202c', // 背景色 (Tailwindのbg-gray-900に近い色)
         background_color: '#1a202c',
         display: 'standalone',    // PWAを通常のアプリのように表示
-        start_url: '/',           // アプリ起動時のURL
+        start_url: '/ai-clicker/',           // アプリ起動時のURL
         icons: [                  // アイコンの設定
           {
             src: 'pwa-192x192.png',
