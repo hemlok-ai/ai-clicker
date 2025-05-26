@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# AI Clicker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI Clickerは放置系クリッカーゲームです。AIがAIを開発する“特異点”を目指しましょう。
 
-Currently, two official plugins are available:
+----
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 特徴
 
-## Expanding the ESLint configuration
+-   **放置系ゲーム**: クリックと自動生成でAIポイント（AP）を集めます。
+-   **AIの進化**: 様々なAI技術やユニットをアンロックし、AIを成長させます。
+-   **PWA対応**: インストール不要で、スマートフォンやPCからいつでもどこでもプレイ可能です。
+-   **オープンソース**: MITライセンスで公開しています。
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+----
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ▶️ ゲームをプレイする
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+[AI Clickerをプレイする](https://hemlok-ai.github.io/ai-clicker)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+----
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🛠️ 使用技術
+
+[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/) [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/) [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/) [![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)](https://web.dev/progressive-web-apps/)
+
+----
+
+## 🎮 遊び方
+
+1.  **AIボタンをクリック**: クリックごとにAIポイント（AP）を生成します。
+2.  **ユニットを購入**: 「自動生成ユニット」を購入すると、自動的にAPが生成されるようになります。
+3.  **アップグレードをアンロック**: 様々なアップグレードを購入して、クリック効率やユニットの生産効率を向上させます。
+4.  **特異点を目指す**: AIを究極の形に進化させましょう！
+
+----
+
+## ⚙️ 開発環境のセットアップ
+
+このプロジェクトをローカルで実行するには：
+
+1.  **リポジトリをクローンします:**
+    ```bash
+    git clone https://github.com/hemlok-ai/ai-clicker.git
+    cd ai-clicker
+    ```
+    ( `[YOUR_GITHUB_USERNAME]` はあなたのGitHubユーザー名に、`ai-clicker-game` はリポジトリ名に置き換えてください)
+
+2.  **依存関係をインストールします:**
+    ```bash
+    npm install
+    ```
+
+3.  **開発サーバーを起動します:**
+    ```bash
+    npm run dev
+    ```
+    ゲームは通常 `http://localhost:5173` で利用可能になります。
+
+----
+
+## 📜 ライセンス
+
+このプロジェクトはMITライセンスの下で公開されています。
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
