@@ -43,7 +43,6 @@ AI Clickerは放置系クリッカーゲームです。AIがAIを開発する“
     git clone https://github.com/hemlok-ai/ai-clicker.git
     cd ai-clicker
     ```
-    ( `[YOUR_GITHUB_USERNAME]` はあなたのGitHubユーザー名に、`ai-clicker-game` はリポジトリ名に置き換えてください)
 
 2.  **依存関係をインストールします:**
     ```bash
