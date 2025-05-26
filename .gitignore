@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports
+.report/
+
+# Node.js
+node_modules/
+
+# pnpm
+.pnpm-store/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Vite
+.vite/
+/dist
+/dev-dist/
+.env
+.env.*
+
+# Vercel
+.vercel/
+
+# Replit
+.replit
